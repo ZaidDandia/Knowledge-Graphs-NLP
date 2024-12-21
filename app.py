@@ -173,47 +173,6 @@ def get_graph_schema(uri, user, password):
     return schema
 
 
-# def query_knowledge_graph_with_schema(question: str, schema: dict):
-#     """Generate a Cypher query using Ollama with schema and entity IDs."""
-#     # Prepare schema information
-#     entities = ", ".join(schema["entities"])
-#     relationships = ", ".join(schema["relationships"])
-#     entity_id_mapping = {
-#         label: [entry["entity_id"] for entry in schema["entity_ids"].get(label, [])]
-#         for label in schema["entities"]
-#     }
-
-#     # Schema Description for Ollama
-#     schema_description = f"""
-#     The graph schema includes:
-#     - Entities: {entities}.
-#     - Relationships: {relationships}.
-#     Entity IDs for each label:
-#     {', '.join([f'{label}: {ids}' for label, ids in entity_id_mapping.items()])}
-#     Use these entities, relationships, and IDs to generate the query.
-#     """
-
-#     # Ollama Prompt
-#     prompt = f"""
-#         Generate a valid Cypher query for Neo4j to answer the question:
-#         "{question}"
-#         Schema details:
-#         {schema_description}
-#         Use the property `entity_id` to match specific entities. For example:
-#         MATCH (n {{entity_id: "Artificial_Intelligence"}}) RETURN n
-#         Only output the Cypher query, no explanation or comments are required.
-#     """
-
-#     response = ollama.generate(prompt=prompt, model="llama3.1")
-#     print("Response from server:", response["response"])
-#     cypher_query = response["response"].strip()
-
-#     # Replace entity names with their IDs
-#     # cypher_query = replace_names_with_ids(cypher_query, entity_id_mapping)
-#     # print("Generated Cypher Query:", cypher_query)
-#     return cypher_query
-
-
 def query_knowledge_graph_with_schema(question: str, schema: dict):
     """Generate a Cypher query using Ollama with schema and entity IDs."""
     # Prepare schema information
