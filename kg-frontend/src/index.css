@@ -1,0 +1,125 @@
+/* Reset some browser defaults */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', 'Arial', sans-serif; /* MUI default font */
+  background-color: #333; /* Light gray background for a clean look */
+  color: #fff; /* Neutral text color */
+}
+
+/* Add consistent box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar styling (if applicable) */
+nav {
+  background-color: #1976d2; /* MUI Primary Color */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Buttons (to complement MUI buttons) */
+button {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Typography adjustments */
+h1, h2, h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Table styling for Dataset Page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #1976d2; /* MUI Primary Color */
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Chatbot message bubbles */
+.chat-bubble {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-bubble.user {
+  background-color: #e3f2fd; /* Light blue */
+  align-self: flex-end;
+  text-align: right;
+}
+
+.chat-bubble.bot {
+  background-color: #f3e5f5; /* Light purple */
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #1976d2; /* MUI Primary Color */
+  color: white;
+}
